@@ -17,7 +17,7 @@ When the application is running, it reads the incoming file - input.json, parses
 - Run app
 - Send request on "http://localhost:8080/swagger-ui/"
 
-####Technologies
+#### Technologies
 - Java 11
 - SpringBoot
 - JUnit
