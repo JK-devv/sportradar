@@ -5,7 +5,6 @@ import sportradar.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Component
 public class SportRadarMapper {
@@ -22,11 +21,11 @@ public class SportRadarMapper {
             Competitor home = competitors.stream()
                     .filter(competitor -> competitor.getQualifier()
                             .equalsIgnoreCase("home"))
-                    .findFirst().orElseThrow();
+                    .findFirst().orElseThrow(() -> new RuntimeException("Can`t find home team"));
             Competitor away = competitors.stream()
                     .filter(competitor -> competitor.getQualifier()
                             .equalsIgnoreCase("away"))
-                    .findFirst().orElseThrow();
+                    .findFirst().orElseThrow(() -> new RuntimeException("Can`t find away team"));
             responseCompetitorDtoAway.setCountry(away.getCountry());
             responseCompetitorDtoAway.setName(away.getName());
             responseCompetitorDtoHome.setCountry(home.getCountry());
