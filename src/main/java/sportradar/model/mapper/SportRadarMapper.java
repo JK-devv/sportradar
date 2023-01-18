@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
-public class ObjectMapperService {
+public class SportRadarMapper {
     public List<ResponseEventDto> mapToResponse(List<Event> events) {
         List<ResponseEventDto> responseEventDtos = new ArrayList<>();
         for (Event event : events) {

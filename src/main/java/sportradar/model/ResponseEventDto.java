@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import java.time.OffsetDateTime;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class ResponseEventDto {
     private OffsetDateTime startDate;
     private String competitionName;
